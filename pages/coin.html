@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <title>Fullstack Crypto Marketplace | AsmrProg</title>
+</head>
+
+<body>
+
+    <div class="overlay">
+        <button id="closeMenu"><i class="ri-close-circle-line"></i></button>
+
+        <div class="nav-links">
+            <a href="/index.html">Home</a>
+            <a href="/pages/charts.html">Charts</a>
+            <a href="/pages/search.html">Search</a>
+            <a href="/pages/about.html">About US</a>
+        </div>
+
+        <div class="social-icons">
+            <a href="https://Youtube.com/AsmrProg"><i class="ri-youtube-line"></i></a>
+            <a href="https://t.me/AsmrProg_Admin"><i class="ri-telegram-line"></i></a>
+            <a href="https://Github.com/AsmrProg-YT"><i class="ri-github-line"></i></a>
+            <a href="#Soon"><i class="ri-discord-line"></i></a>
+        </div>
+
+    </div>
+
+    <div class="main">
+
+        <div class="global">
+            <p>Coins: <b id="coins-count">N/A</b></p>
+            <p>Exchanges: <b id="exchanges-count">N/A</b></p>
+            <p>Market Cap: <span><b id="marketCap">N/A</b> <span id="marketCapChange">N/A <i
+                            class="ri-arrow-down-s-fill"></i></span></span></p>
+            <p>24H Vol: <b id="volume">N/A</b></p>
+            <p>Dominance: <b id="dominance">BTC N/A% - ETH N/A%</b></p>
+        </div>
+
+        <nav>
+            <div class="left-section">
+                <button id="openMenu"><i class="ri-menu-line"></i></button>
+                <a href="#" class="logo">Logo.</a>
+                <div class="nav-links">
+                    <a href="/index.html">Home</a>
+                    <a href="/pages/charts.html">Charts</a>
+                    <a href="/pages/search.html">Search</a>
+                    <a href="/pages/about.html">About US</a>
+                </div>
+            </div>
+            <div class="right-section">
+                <form class="search" id="searchForm">
+                    <i class="ri-search-line"></i>
+                    <input type="text" id="searchInput" placeholder="Search for an asset..." required
+                        autocomplete="off">
+                </form>
+                <i id="theme-toggle" class="ri-sun-line"></i>
+            </div>
+        </nav>
+
+        <div class="coin-container">
+            <div class="left-section">
+                <div class="ticker">
+                    <div class="tradingview-widget-container" id="ticker-widget"></div>
+                </div>
+                <h3>Statistics</h3>
+                <div class="coin-info"></div>
+            </div>
+
+            <div class="main-section">
+                <div class="mini-chart">
+                    <div class="tradingview-widget-container" id="mini-chart-widget"></div>
+                </div>
+            </div>
+
+            <div class="right-section"></div>
+
+        </div>
+
+        <div class="coin-desc">
+            <h3>About Asset</h3>
+            <p id="coin-desc-p">
+                Bitcoin is the first successful internet money based on peer-to-peer technology; whereby
+                no central bank or authority is involved in the transaction and production of the Bitcoin currency. It
+                was created by an anonymous individual/group under the name, Satoshi Nakamoto. The source code is
+                available publicly as an open source project, anybody can look at it and be part of the developmental
+                process.
+
+                Bitcoin is changing the way we see money as we speak. The idea was to produce a means of exchange,
+                independent of any central authority, that could be transferred electronically in a secure, verifiable
+                and immutable way. It is a decentralized peer-to-peer internet currency making mobile payment easy, very
+                low transaction fees, protects your identity, and it works anywhere all the time with no central
+                authority and banks.
+
+                Bitcoin is designed to have only 21 million BTC ever created, thus making it a deflationary currency.
+                Bitcoin uses the <a href="https://www.coingecko.com/en?hashing_algorithm=SHA-256">SHA-256</a> hashing
+                algorithm with an average transaction confirmation time of 10 minutes. Miners today are mining Bitcoin
+                using ASIC chip dedicated to only mining Bitcoin, and the hash rate has shot up to peta hashes.
+
+                Being the first successful online cryptography currency, Bitcoin has inspired other alternative
+                currencies such as <a href="https://www.coingecko.com/en/coins/litecoin">Litecoin</a>, <a
+                    href="https://www.coingecko.com/en/coins/peercoin">Peercoin</a>, <a
+                    href="https://www.coingecko.com/en/coins/primecoin">Primecoin</a>, and so on.
+
+                The cryptocurrency then took off with the innovation of the turing-complete smart contract by <a
+                    href="https://www.coingecko.com/en/coins/ethereum">Ethereum</a> which led to the development of
+                other amazing projects such as <a href="https://www.coingecko.com/en/coins/eos">EOS</a>, <a
+                    href="https://www.coingecko.com/en/coins/tron">Tron</a>, and even crypto-collectibles such as <a
+                    href="https://www.coingecko.com/buzz/ethereum-still-king-dapps-cryptokitties-need-1-billion-on-eos">CryptoKitties</a>.
+            </p>
+            <div class="error-message" id="coin-info-error">API limit reached. Please try again later.</div>
+        </div>
+
+
+    </div>
+
+    <footer>
+        <p>AsmrProg Youtube, All Rights Reserved.</p>
+        <div class="social-icons">
+            <a href="https://Youtube.com/AsmrProg"><i class="ri-youtube-line"></i></a>
+            <a href="https://t.me/AsmrProg_Admin"><i class="ri-telegram-line"></i></a>
+            <a href="https://Github.com/AsmrProg-YT"><i class="ri-github-line"></i></a>
+            <a href="#Soon"><i class="ri-discord-line"></i></a>
+        </div>
+    </footer>
+
+    <button onclick="scrollToTop()" id="scrollTop"><i class="ri-arrow-up-s-line"></i></button>
+
+
+    <script src="../assets/js/global.js"></script>
+    <script src="../assets/js/coin.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <title>Fullstack Crypto Marketplace | AsmrProg</title>
+</head>
+
+<body>
+
+    <div class="overlay">
+        <button id="closeMenu"><i class="ri-close-circle-line"></i></button>
+
+        <div class="nav-links">
+            <a href="/index.html">Home</a>
+            <a href="/pages/charts.html">Charts</a>
+            <a href="/pages/search.html" class="active">Search</a>
+            <a href="/pages/about.html">About US</a>
+        </div>
+
+        <div class="social-icons">
+            <a href="https://Youtube.com/AsmrProg"><i class="ri-youtube-line"></i></a>
+            <a href="https://t.me/AsmrProg_Admin"><i class="ri-telegram-line"></i></a>
+            <a href="https://Github.com/AsmrProg-YT"><i class="ri-github-line"></i></a>
+            <a href="#Soon"><i class="ri-discord-line"></i></a>
+        </div>
+
+    </div>
+
+    <div class="main">
+
+        <div class="global">
+            <p>Coins: <b id="coins-count">N/A</b></p>
+            <p>Exchanges: <b id="exchanges-count">N/A</b></p>
+            <p>Market Cap: <span><b id="marketCap">N/A</b> <span id="marketCapChange">N/A <i
+                            class="ri-arrow-down-s-fill"></i></span></span></p>
+            <p>24H Vol: <b id="volume">N/A</b></p>
+            <p>Dominance: <b id="dominance">BTC N/A% - ETH N/A%</b></p>
+        </div>
+
+        <nav>
+            <div class="left-section">
+                <button id="openMenu"><i class="ri-menu-line"></i></button>
+                <a href="#" class="logo">Logo.</a>
+                <div class="nav-links">
+                    <a href="/index.html">Home</a>
+                    <a href="/pages/charts.html">Charts</a>
+                    <a href="/pages/search.html" class="active">Search</a>
+                    <a href="/pages/about.html">About US</a>
+                </div>
+            </div>
+            <div class="right-section">
+                <form class="search" id="searchForm">
+                    <i class="ri-search-line"></i>
+                    <input type="text" id="searchInput" placeholder="Search for an asset..." required
+                        autocomplete="off">
+                </form>
+                <i id="theme-toggle" class="ri-sun-line"></i>
+            </div>
+        </nav>
+
+        <h3 id="searchHeading">Search results for "bit"</h3>
+        <div class="search-container">
+            <div class="item">
+                <h4>Asset Results</h4>
+                <div id="coins-list"></div>
+                <div class="spinner" id="coins-list-spinner"></div>
+                <div class="error-message" id="coins-list-error">API limit reached. Please try again later.</div>
+            </div>
+
+            <div class="item">
+                <h4>Exchange Results</h4>
+                <div id="exchanges-list"></div>
+                <div class="spinner" id="exchanges-list-spinner"></div>
+                <div class="error-message" id="exchanges-list-error">API limit reached. Please try again later.</div>
+            </div>
+
+            <div class="item">
+                <h4>NFT Results</h4>
+                <div id="nfts-list"></div>
+                <div class="spinner" id="nfts-list-spinner"></div>
+                <div class="error-message" id="nfts-list-error">API limit reached. Please try again later.</div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <footer>
+        <p>AsmrProg Youtube, All Rights Reserved.</p>
+        <div class="social-icons">
+            <a href="https://Youtube.com/AsmrProg"><i class="ri-youtube-line"></i></a>
+            <a href="https://t.me/AsmrProg_Admin"><i class="ri-telegram-line"></i></a>
+            <a href="https://Github.com/AsmrProg-YT"><i class="ri-github-line"></i></a>
+            <a href="#Soon"><i class="ri-discord-line"></i></a>
+        </div>
+    </footer>
+
+    <button onclick="scrollToTop()" id="scrollTop"><i class="ri-arrow-up-s-line"></i></button>
+
+
+    <script src="../assets/js/global.js"></script>
+    <script src="../assets/js/search.js"></script>
+</body>
+
+</html>
